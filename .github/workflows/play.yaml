@@ -4,6 +4,8 @@ jobs:
   report:
     runs-on: ubuntu-latest
     steps:
+      - name: Present Working Dir
+        run: pwd
       - uses: actions/checkout@v1
       - name: List files
         run: ls 
