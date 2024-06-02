@@ -1,0 +1,11 @@
+name: Push commit
+on: push
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: List files
+        run: ls 
+      - name: Present Working Dir
+        run: pwd
