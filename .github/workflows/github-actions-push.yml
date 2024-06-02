@@ -10,6 +10,9 @@ jobs:
       - name: add files
         run: git add report.txt
       - name: Commit report
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
         run: |
           git config --global user.name 'Harpreet Singh'
           git config --global user.email 'harpreet.surdy@gmail.com'
